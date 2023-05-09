@@ -21,11 +21,11 @@ const people = [
 // 5) How many people are there in each department? //Development //Marketing //Sales //Office Management
 let i = 0;
 // 1) Thu nhập trung bình của tất cả những người trong mảng là bao nhiêu?
-// let totalSalary = 0;
-// for(i; i < people.length; i++){ 
-//     totalSalary += parseInt(people[i].salary);
-// }
-// console.log(totalSalary/people.length)
+let totalSalary = 0;
+for(i; i < people.length; i++){ 
+    totalSalary += parseInt(people[i].salary);
+}
+console.log(totalSalary/people.length)
 // 2) Những người hiện đang trên 30 tuổi là ai?
 const getAge = (dateString) => {
     var today = new Date();
@@ -37,20 +37,18 @@ const getAge = (dateString) => {
     }
     return age;
 }
-// const olderThan30 = people.filter( e => getAge(e.DOB) > 30);
+const olderThan30 = people.filter( e => getAge(e.DOB) > 30);
 // console.log(olderThan30)
 // 3) Nhận danh sách tên đầy đủ của mọi người (FirstName và LastName).
-// for(i;i < people.length;i++){
-//     let firstlastName = people[i].firstName +" "+ people[i].lastName;
-//     console.log(firstlastName);
-// }
+for(i; i < people.length; i++){
+    let firstlastName = people[i].firstName +" "+ people[i].lastName;
+    console.log(firstlastName);
+}
 
 // 4) Lấy danh sách những người trong mảng theo thứ tự từ trẻ nhất đến già nhất.
-// const sortAge = people.sort((a,b)=> getAge(a.DOB) - getAge(b.DOB))
-// console.log(sortAge)
+const sortAge = people.sort((a,b)=> getAge(a.DOB) - getAge(b.DOB))
+console.log(sortAge)
 // 5) Có bao nhiêu người trong mỗi bộ phận? //Development //Marketing //Sales //Office Management
-
-
 
 // Bài 2: Sử dụng vòng lặp để xóa phần tử trùng lặp trong mảng.
 const arr = [ 25, 50, 43, 36, 31, 26, 24, 19, 28, 24, 4, 18, 16, 48, 47, 49, 42, 15, 3, 16 ];
